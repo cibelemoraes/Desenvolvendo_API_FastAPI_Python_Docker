@@ -12,7 +12,7 @@ class AtletaModel(BaseModel):
     cpf: Mapped[str] = mapped_column(String(11), nullable=False)
     idade: Mapped[str] = mapped_column(Integer, nullable=False)
     peso: Mapped[str] = mapped_column(Float, nullable=False)
-    altura : Aapped[str] = mapped_column(String(1), nullable=False)
+    altura : Mapped[str] = mapped_column(String(1), nullable=False)
     sexo : Mapped[str] = mapped_column(String(50), nullable=False)
     created_at : Mapped[DateTime] = mapped_column(DateTime,nullable=False)
     
