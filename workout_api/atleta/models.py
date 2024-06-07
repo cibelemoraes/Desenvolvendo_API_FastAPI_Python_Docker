@@ -12,8 +12,11 @@ class AtletaModel(BaseModel):
     cpf: Mapped[str] = mapped_column(String(11), nullable=False)
     idade: Mapped[str] = mapped_column(Integer, nullable=False)
     peso: Mapped[str] = mapped_column(Float, nullable=False)
-    altura : Mapped[str] = mapped_column(String(1), nullable=False)
+    altura : Mapped[str] = mapped_column(Float, nullable=False)
     sexo : Mapped[str] = mapped_column(String(50), nullable=False)
     created_at : Mapped[DateTime] = mapped_column(DateTime,nullable=False)
     categoria: Mapped['CategriaModel'] = relationship(back_populates='atleta')
-    categoria_id = Mapped[int] = mapped_column(ForeignKey('categoria.ph_id'))
+    categoria_id = Mapped[int] = mapped_column(ForeignKey('categoria.pk_id'))
+    centro_treinamento: Mapped['CentroTreinamentoModel'] = relationship(back_populates='atleta')
+    centro_treinamento_id = Mapped[int] = mapped_column(ForeignKey('centro_treinamento.pk_id'))
+    
