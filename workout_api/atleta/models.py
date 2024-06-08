@@ -16,7 +16,7 @@ class AtletaModel(BaseModel):
     sexo : Mapped[str] = mapped_column(String(50), nullable=False)
     created_at : Mapped[DateTime] = mapped_column(DateTime,nullable=False)
     categoria: Mapped['CategriaModel'] = relationship(back_populates='atleta')
-    categoria_id = Mapped[int] = mapped_column(ForeignKey('categoria.pk_id'))
+    categoria_id : Mapped[int] = mapped_column(ForeignKey('categoria.pk_id'))
     centro_treinamento: Mapped['CentroTreinamentoModel'] = relationship(back_populates='atleta')
-    centro_treinamento_id = Mapped[int] = mapped_column(ForeignKey('centro_treinamento.pk_id'))
+    centro_treinamento_id : Mapped[int] = mapped_column(ForeignKey('centro_treinamento.pk_id'))
     
