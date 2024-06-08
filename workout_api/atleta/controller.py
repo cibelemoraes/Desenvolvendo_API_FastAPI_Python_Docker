@@ -8,5 +8,8 @@ router = APIRouter()
              status_code=status.HTTP_201_CREATED
              )
 
-async def post(db_session: DatabaseDepency, atleta_in: AtletaIn = Body(...)):
+async def post(
+    db_session: DatabaseDepency, 
+    atleta_in: AtletaIn = Body(...)
+    ):
     pass
