@@ -14,5 +14,5 @@ class Atleta(BaseSchema):
 class AtletaIn(Atleta):
     pass
 
-class AtletaOut(AtletaIn, OutMixin)
+class AtletaOut(AtletaIn, OutMixin):
     pass
